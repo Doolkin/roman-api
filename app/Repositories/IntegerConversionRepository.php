@@ -53,7 +53,7 @@ class IntegerConversionRepository implements IntegerConversionInterface
 	public function saveNew( $theInteger ){
 		
 		// Just to be sure that the value is numeric
-		if ( is_numeric($theInteger) == true) {
+		if ( is_numeric($theInteger) == true && ($theInteger >= 1 && $theInteger <=3999 ) ) {
 
             // Converting the given integer to roman format using model method (method is in the model)
             $romanFormatInteger = $this->toRomanNumerals( $theInteger );
