@@ -13,6 +13,9 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:api');
+
+Route::post('/', 'IntegerConversionsController@store');
+Route::get('/', 'IntegerConversionsController@index');
+Route::get('/top', 'IntegerConversionsController@top');
+
+
